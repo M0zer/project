@@ -1,0 +1,8 @@
+name: drupal9-app
+recipe: drupal9
+services:
+  appserver:
+    webroot: .
+    xdebug: true
+    config:
+      php: .vscode/php.ini

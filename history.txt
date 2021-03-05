@@ -1,0 +1,288 @@
+    1  code .zshrc
+    3  allias ga
+    4  alias ga
+    6  ~zsh-autosuggestions~
+    7  zsh-autosuggestions
+    8  cd .zsh
+    9  la -la
+   11  mkdir zshplugins
+   12  cd zshplugins
+   13  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+   15  echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+   16  source .zshrc
+   18  git
+   22  rm -rf ~/.oh-my-zsh\n
+   23  git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+   25  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+   27  alias g
+   28  alias gp
+   29  mkdir aoc 2016
+   30  mkdir aoc-2016
+   31  cd aoc-2016
+   33  gs
+   34  g status
+   35  sudo apt install composer
+   36  php -v
+   37  composer --version
+   43  cd asztal
+   45  mkdir fizzbuzz
+   47  git init 
+   48  composer init
+   54  composer require php:^7.4
+   56  sudo apt install php-xml~
+   57  sudo apt install php-xml
+   63  git commit -m "First day with composer"
+   64  git remote add origin git@github.com:M0zer/FizzBuzz.git
+   65  git push origin master 
+   66  history
+   68  install php storm
+   70  install phpstorm with tests & oop & ~
+   71  install phpstorm with tests & oop &
+   72  install phpstorm with tests 
+   73  install phpstorm
+   75  install phpstorm .
+   77  cd..
+   80  cd m0zer
+   81  install phpstorm 
+   82  sudo apt update~
+   83  sudo apt update
+   84  $ sudo apt install ubuntu-make
+   85  sudo apt install ubuntu-make
+   86  umake --version
+   94  sudo reboot
+   95  umake ide phpstorm
+   96  cat phpstorm
+   98  chmod +x ~/.local/share/applications/jetbrains-phpstorm.desktop
+   99  és
+  106  git dif
+  108  git restore composer.json
+  113  rm -rf vendor
+  116  composer require --dev squizzlabs/phpcs
+  117  composer require --dev squizlabs/php_codesniffer
+  123  asd
+  124  code test.php
+  129  cd vendor
+  134  php teszt.php
+  136  cd src
+  139  ./FizzBuzz.php
+  142  cd tests
+  145  ./tests/src/Unit/FizzBuzzTest.php
+  147  lés
+  152  ./vendor/phpunit/phpunit/phpunit
+  154  ./vendor/phpunit/phpunit
+  157  php FizzBuzz.php
+  158  composer require --dev phpunit/phpunit
+  160  ./tests/src/Unit/
+  161  cd .. 
+  163  php test.php
+  164  ./vendor/squizlabs/php_codesniffer/bin/phpcs 
+  165  php FizzBuzzTests.php
+  166  php ./FizzBuzzTests.php
+  168  sudo ^[[200~sudo apt-get install \\n    apt-transport-https \\n    ca-certificates \\n    curl \\n    gnupg-agent \n: 1609960988:0;sudo apt-get install \\n    apt-transport-https \\n    ca-certificates \\n    curl \\n    gnupg-agent \\n    software-properties-common
+  169  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  170  sudo apt-key fingerprint 0EBFCD88
+  171  sudo apt-get update
+  172  sudo apt-get install docker-ce docker-ce-cli containerd.io
+  173  sudo docker run hello-world
+  181  docker 
+  186  sudo systemctl restart docker
+  189  sudo lando init \\n  --source remote \\n  --remote-url https://www.drupal.org/download-latest/tar.gz \\n  --remote-options="--strip-components 1" \\n  --recipe drupal9 \\n  --webroot . \\n  --name my-first-drupal9-app
+  191  \n  --source remote \\n  --remote-url https://www.drupal.org/download-latest/tar.gz \\n  --remote-options="--strip-components 1" \\n  --recipe drupal9 \\n  --webroot . \\n  --name my-first-drupal9-app
+  200  lando init \\n  --source remote \\n  --remote-url https://www.drupal.org/download-latest/tar.gz \\n  --remote-options="--strip-components 1" \\n  --recipe drupal9 \\n  --webroot . \\n  --name my-first-drupal9-app
+  203  code
+  209  cd fizz
+  214  bin/phpunit
+  232  source ~/.zshrc~
+  245  git st
+  250  code ~/.zshrc
+  253  source ~/.zshrc
+  261  cd a
+  267  http://localhost:49156/
+  268  code 
+  272  cd fizzbuzz
+  273  git checkout
+  274  git checkout -b fu
+  275  git checkout -b master
+  277  git branch -vvv
+  279  echo asd
+  290  cd .
+  295  lando sites
+  304  OA
+  319  git .
+  321  git commit -m "form"
+  322  git diff
+  323  git diff HEAD~1 
+  341  cd
+  350  lando drush pml
+  353  lando drush pml | grep app_dummy
+  354  lando drush en app_dummy
+  367  git reset HEAD~1 --soft
+  370  git commit -m "form block homework"
+  379  git checkout -b dependency-injection
+  380  git stash pop
+  382  git commit -m "dependecy-injection"
+  384  git remote add origin git@github.com:M0zer/dummy.git
+  388  git checkout dependency-injection
+  389  git push origin dependency-injection
+  396  wget https://www.drupal.org/files/projects/drupal-x.x.tar.gz
+  397  wget https://www.drupal.org/files/projects/drupal-9.1.4.tar.gz
+  398  tar -zxvf drupal-9.1.4.tar.gz
+  400  cd drupal-9.1.0
+  403  cd hz
+  404  cp sites/default/default.settings.php sites/default/settings.php
+  405  mv drupal-9.1.4 /var/www/
+  406  hmod a+w sites/default/settings.php
+  407  chmod a+w sites/default/settings.php
+  408  chmod a+w sites/default
+  409  mysqladmin -u username -p create databasename
+  411  sudo dockerd 
+  413  cd d9\ \(másolat\)/
+  415  sudo lando init \\n  --source remote \\n  --remote-url https://www.drupal.org/download-latest/tar.gz \\n  --remote-options="--strip-components 1" \\n  --recipe drupal9 \\n  --webroot . \\n  --name my-first-drupal9-app
+  416  sudo lando init \\n  --source remote \\n  --remote-url https://www.drupal.org/download-latest/tar.gz \\n  --remote-options="--strip-components 1" \\n  --recipe drupal9 \\n  --webro
+  417  sudo systemctl stop docker
+  418  systemctl status docker
+  419  sudo chmod 666 /var/run/docker.sock
+  420  mkdir va
+  422  lando init \\n  --source remote \\n  --remote-url https://www.drupal.org/download-latest/tar.gz \\n  --remote-options="--strip-components 1" \\n  --recipe drupal9 \\n  --webroot . \\n  --name my-first-drupal9-app
+  423  drush site:install
+  438  lando drush stop
+  442  lando drush site:install minimal 
+  450  cd va
+  452  cd Asztal/va
+  455  ^[[200~git remote add origin git@github.com:M0zer/dummy.git~
+  458  git add /va
+  460  git commit -m "hazi"
+  465  git remote add origin git@github.com:M0zer/va.git
+  466  git remote -vvv
+  471  lando drush status
+  473  cp ./example.gitignor ./gitignor
+  474  cp ./example.gitignore ./gitignore
+  475  mv ./gitignore ./.gitignore
+  479  git update-ref -d HEAD
+  483  ls 
+  485  code .gitignore
+  486  git restore --staged.
+  487  git restore --staged .
+  489  mkdir als
+  490  mkdir gitignore
+  491  mkdir drupal9
+  492  mv ./va/* ./drupal9
+  493  cd drupal9
+  498  rm -rf ./*
+  500  sudo rm -rf ./*
+  504  (shopt -s dotglob; mv ./va/* ./drupal-project)
+  505  shop
+  506  setopt -s glob_dots
+  510  ls -la
+  512  mv ./va/* ./drupal-project
+  514  mkdir drupal-project2.0
+  515  cd drupal-project2.0
+  516  lando init \\n  --source remote \\n  --remote-url https://www.drupal.org/download-latest/tar.gz \\n  --remote-options="--strip-components 1" \\n  --recipe drupal9 \\n  --webroot . \\n  --name drupal9-app
+  518  rm drupal-project
+  519  rm -rf drupal-project
+  520  mkdir drupal-project
+  522  lando init \\n  --source remote \\n  --remote-url https://www.drupal.org/download-latest/tar.gz \\n  --remote-options="--strip-components 1" \\n  --recipe drupal9 \\n  --webroot . \\n  --name drupal9-app
+  523  mv ./example.gitignore ./.gitignore
+  524  git init
+  527  git commit -m "firs commit"
+  528  git commit --amend
+  529  git log
+  530  git remote add origin git@github.com:M0zer/drupal-project.git
+  531  git push origin master
+  534  code .lando.yml
+  538  lando composer require drush/drush
+  541  lando drush site:install
+  542  lando drush user:login
+  556  cd PhpStorm-203.6682.180
+  574  composer require "ext-gd:*" --ignore-platform-reqs
+  576  code composer.json
+  578  cd drupal
+  579  cd drupal-project
+  585  sudo apt-get install -y php7.4-gd
+  587  lando install php
+  588  lando ssh -s myservice -c "php -m"
+  589  lando ssh -s services -c "php -m"
+  590  lando ssh -s service -c "php -m"
+  593  lando rebuild
+  595  php enable gd
+  596  apt-get install php-gd
+  597  sudo apt-get install php7.4-gd
+  598  composer require drupal/migrate_tools
+  601  lando drush migrate-import 
+  603  lando drush migrate-import dp_migration
+  604  lando drush migrate-import first
+  605  lando drush migrate-import dp_migration_node_news.yml
+  607  lando drush migrate-import -all
+  614  lando drush migrate:status
+  624  lando drush pmu dp_migration
+  625  lando drush en dp_migration
+  626  lando drush migrate-import dp_migration_node_news
+  628  git branch -d fu
+  630  git branch -d migration
+  631  git branch migration
+  632  git branch ?
+  633  git branch --help
+  634  git remote migration
+  635  git branch
+  636  git checkout migration
+  640  git commit -m "migration"
+  642  git push
+  646  q
+  649  git pull
+  652  cd /bin
+  654  cd Asztal/PhpStorm-203.6682.180
+  655  cd bin
+  656  ./phpstorm.sh
+  659  git stash 
+  660  git pull origin migration
+  663  lando composer install
+  665  lando drush site:install minimal --existing-config
+  666  lando status
+  670  git add . 
+  671  git commit -m "Hook"
+  672  git push origin migration
+  677  git checkout mastet
+  679  git checkout -b homework
+  682  lando in
+  687  git checkout master
+  688  git pull origin master
+  692  composer install
+  693  composer uppdate
+  697  git checkout homework
+  700  git add .
+  701  git commit -m "password"
+  702  git push origin homework
+  706  touch .vscode/php.ini
+  707  code .vscode/php.ini
+  708  php
+  709  php ?
+  710  php help
+  711  php -vvv
+  714  touch .vscode/launch.json
+  715  code .vscode/launch.json
+  718  lando drush cache:rebuild
+  719  dockerd
+  721  lando -v
+  722  docker help
+  727  code . 
+  728  git status
+  733  cd Asztal/drupal-project
+  734  lando install 
+  736* cd Asztal
+  737* ls
+  738* cd d9
+  740* lando start
+  741  code .
+  742  lando stop
+  743  lando rebuild -y
+  745  lando password
+  746  lando ?
+  747  lando 
+  748  lando --help
+  749  lando congfig
+  750  lando config
+  751  lando info
+  752  lando stop 
+  753  cd ..
+  754  mkdir project
+  755  cd project
