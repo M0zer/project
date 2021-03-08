@@ -1,73 +1,87 @@
-<?php 
+<?php
 
-namespace Drupal\example\Form;
+namespace Drupal\iq_module\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Configure example settings for this site.
+ *  our simple form
  */
-class IqSettingsForm extends ConfigFormBase {
 
-  /** 
-   * Config settings.
-   *
-   * @var string
-   */
-  const SETTINGS = 'example.settings';
 
-  /** 
-   * {@inheritdoc}
-   */
-  public function getFormId() {
-    return 'example_admin_settings';
-  }
+class IqForm extends FormBase { 
 
-  /** 
-   * {@inheritdoc}
+    protected $configFactory;
+
+    public static function create(ContainerInterface $container)
+    {
+      return new static(
+        $container->get('config.factory')
+      );
+    }
+  
+    public function __construct(
+      ConfigFactoryInterface $configFactory
+    )
+    {
+      $this->configFactory = $configFactory;
+    }
+
+
+  /**
+   *  {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
-    return [
-      static::SETTINGS,
+  public function getFormId(){
+    return'iq_form';
+
+}
+
+  /**
+   *  {@inheritdoc}
+   */
+  public function buildForm(array $form , FormstateInterface $form_state){
+
+    $form['iq_value']=[
+        '#type' => 'number',
+        '#title' => $this->t('elso szam'),
+
     ];
-  }
+    
+    $form['submit']=[
+        '#type' => 'submit',
+        '#value' => $this->t('Submite'),
+    ];
 
-  /** 
-   * {@inheritdoc}
-   */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config(static::SETTINGS);
+    return $form;
+}
+public function submitForm(array &$form, FormstateInterface $form_state)
+  { $settings = $this->configFactory->getEditable('iq_module.settings');
+    $iq2=$form_state->getValue('iq_value');
+    $iq=$settings->get('iq_value');
+    
+    $this->messenger()->addWarning($this->t('@iq , @iq2', [
+        '@iq'=>$settings->get('iq_value'),
+        '@iq2'=>$iq2,
+        ]));
+      if($iq<$iq2){
+            $this->messenger()->addStatus($this->t('Az IQ-d @value', [
+            '@value' => $form_state->getValue('iq_value'),
+            ]));
+            $settings
+            ->set('iq_value', $form_state->getValue('iq_value'))
+            ->save();      
 
-    $form['example_thing'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Things'),
-      '#default_value' => $config->get('example_thing'),
-    ];  
+    }
+    else{
 
-    $form['other_things'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Other things'),
-      '#default_value' => $config->get('other_things'),
-    ];  
-
-    return parent::buildForm($form, $form_state);
-  }
-
-  /** 
-   * {@inheritdoc}
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    // Retrieve the configuration.
-    $this->configFactory->getEditable(static::SETTINGS)
-      // Set the submitted configuration setting.
-      ->set('example_thing', $form_state->getValue('example_thing'))
-      // You can set multiple configurations at once by making
-      // multiple calls to set().
-      ->set('other_things', $form_state->getValue('other_things'))
+        $this->messenger()->addWarning($this->t('Túl kevés az IQ-d'));
+    $settings
+      ->set('iq_value', $form_state->getValue('iq_value'))
       ->save();
-
-    parent::submitForm($form, $form_state);
+    }
   }
 
 }

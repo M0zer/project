@@ -8,6 +8,21 @@ use Drupal\Core\Form\FormStateInterface;
  * Configure example settings for this site.
  */
 class IqSettingsForm extends ConfigFormBase {
+  protected $configFactory;
+
+  public static function create(ContainerInterface $container)
+  {
+    return new static(
+      $container->get('config.factory')
+    );
+  }
+
+  public function __construct(
+    ConfigFactoryInterface $configFactory
+  )
+  {
+    $this->configFactory = $configFactory;
+  }
 
   /** 
    * Config settings.
@@ -20,7 +35,7 @@ class IqSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'example_admin_settings';
+    return 'iq_settings';
   }
 
   /** 
@@ -37,17 +52,11 @@ class IqSettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config(static::SETTINGS);
-
-    $form['example_thing'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Things'),
-      '#default_value' => $config->get('example_thing'),
-    ];  
-
-    $form['other_things'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Other things'),
-      '#default_value' => $config->get('other_things'),
+    $settings = $this->configFactory->getEditable('iq_module.settings');
+    $form['Iq_value'] = [
+      '#type' => 'number',
+      '#title' => $this->t('IQ'),
+      '#default_value' => $settings->get('iq_value'),
     ];  
 
     return parent::buildForm($form, $form_state);
@@ -57,13 +66,8 @@ class IqSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    // Retrieve the configuration.
-    $this->configFactory->getEditable(static::SETTINGS)
-      // Set the submitted configuration setting.
-      ->set('example_thing', $form_state->getValue('example_thing'))
-      // You can set multiple configurations at once by making
-      // multiple calls to set().
-      ->set('other_things', $form_state->getValue('other_things'))
+    $settings
+      ->set('iq_value', $form_state->getValue('iq_value'))
       ->save();
 
     parent::submitForm($form, $form_state);
