@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 
 
-class iq_form extends FormBase { 
+class IqForm extends FormBase { 
 
     protected $configFactory;
 
@@ -60,19 +60,27 @@ class iq_form extends FormBase {
 public function submitForm(array &$form, FormstateInterface $form_state)
   { $settings = $this->configFactory->getEditable('iq_module.settings');
     $iq2=$form_state->getValue('iq_value');
+    $iq=$settings->get('iq_value');
+    
     $this->messenger()->addWarning($this->t('@iq , @iq2', [
-        '@iq'=>$settings->get('iq.value'),
+        '@iq'=>$settings->get('iq_value'),
         '@iq2'=>$iq2,
         ]));
       if($iq<$iq2){
             $this->messenger()->addStatus($this->t('Az IQ-d @value', [
             '@value' => $form_state->getValue('iq_value'),
             ]));
+            $settings
+            ->set('iq_value', $form_state->getValue('iq_value'))
+            ->save();      
 
     }
     else{
 
         $this->messenger()->addWarning($this->t('Túl kevés az IQ-d'));
+    $settings
+      ->set('iq_value', $form_state->getValue('iq_value'))
+      ->save();
     }
   }
 
