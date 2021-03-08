@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 namespace Drupal\example\Form;
 
 use Drupal\Core\Form\ConfigFormBase;

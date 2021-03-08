@@ -1,0 +1,8 @@
+<?php 
+
+function iq_module_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+$form['Button'] = [
+    '#type' => 'checkbox',
+    '#title' => t("Ez a gomb nem csinál semmit"),
+  ];
+}
