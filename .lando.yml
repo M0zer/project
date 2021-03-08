@@ -1,4 +1,4 @@
-name: drupal9-app
+name: project
 recipe: drupal9
 services:
   appserver:
