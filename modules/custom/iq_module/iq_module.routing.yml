@@ -1,0 +1,8 @@
+iq_form.module:
+  path: '/iq'
+  defaults:
+    _form: '\Drupal\iq_module\Form\iq_form'
+    _title: 'IQ'
+  requirements:
+    _access: 'TRUE'
+    
