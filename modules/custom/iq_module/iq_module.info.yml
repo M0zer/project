@@ -1,0 +1,9 @@
+name: iq custom module
+description: our iq form and controller
+package: Custom
+type: module
+core_version_requirement: 9.x
+
+iq_module.settings:
+  iq.value: alma
+
