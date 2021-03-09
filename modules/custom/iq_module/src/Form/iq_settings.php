@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\example\Form;
+namespace Drupal\iq_module\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
