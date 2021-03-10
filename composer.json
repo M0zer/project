@@ -20,6 +20,7 @@
         "drupal/core-project-message": "^9.1",
         "drupal/core-recommended": "^9.1",
         "drupal/core-vendor-hardening": "^9.1",
+        "drupal/migrate_tools": "5.x-dev@dev",
         "drush/drush": "^10.4"
     },
     "conflict": {
@@ -86,5 +87,9 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "drupal/coder": "^8.3"
     }
 }

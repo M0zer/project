@@ -1,0 +1,17 @@
+uuid: 2f5de59f-0816-4c2c-81d3-39ca092ccaf4
+langcode: en
+status: true
+dependencies: {  }
+id: manager
+label: manager
+weight: 3
+is_admin: null
+permissions:
+  - 'create news content'
+  - 'delete any news content'
+  - 'delete news revisions'
+  - 'delete own news content'
+  - 'edit any news content'
+  - 'edit own news content'
+  - 'revert news revisions'
+  - 'view news revisions'
