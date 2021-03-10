@@ -4,9 +4,7 @@ namespace Drupal\iq_module\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-/**
- * Configure example settings for this site.
- */
+
 class IqSettingsForm extends ConfigFormBase {
   protected $configFactory;
 
