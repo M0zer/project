@@ -1,4 +1,5 @@
 {
+    
     "name": "drupal/legacy-project",
     "description": "Project template for Drupal 9 projects with composer following drupal/drupal layout",
     "type": "project",
@@ -8,6 +9,7 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
+    
     "repositories": [
         {
             "type": "composer",
@@ -92,4 +94,5 @@
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
         "drupal/coder": "^8.3"
     }
+    
 }

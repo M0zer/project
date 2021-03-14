@@ -1,0 +1,5 @@
+iq_module.config:
+  title: 'iq module'
+  base_route_name: iq_module.admin.config
+  names:
+    - iq.settings
