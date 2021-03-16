@@ -1,0 +1,17 @@
+uuid: 6842a001-23ad-43ca-97f5-e52a0900a336
+langcode: en
+status: true
+dependencies:
+  module:
+    - f_migration
+_core:
+  default_config_hash: yz6W5Ke37dpcAVmJP4sGi7T3zYDRR5CSvYFL9e09q5Y
+id: project
+label: 'Some content'
+description: 'Some content description'
+source_type: files
+module: f_migration
+shared_configuration:
+  source:
+    plugin: migrate_dc_yaml
+    fileDir: ./sites/default/content/project

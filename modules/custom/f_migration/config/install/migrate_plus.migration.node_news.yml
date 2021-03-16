@@ -14,16 +14,16 @@ source:
     bundle: news
 
   fields:
-    title: Title
-    tags: tags
+    source_title: Title
+    #tags: tags
 
 process:
   type: constants/bundle
-  title: title
-  field_category:
-    plugin: migration_lookup
-    source: tags
-    migration: taxonomy_term_tags
+  title: source_title
+  #field_category:
+   # plugin: migration_lookup
+    #source: tags
+    #migration: taxonomy_term_tags
 
 destination:
   plugin: 'entity:node'
