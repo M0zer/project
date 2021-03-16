@@ -1,0 +1,11 @@
+langcode: en
+status: true
+id: project # migration group id here eg: basic_content
+label: 'Some content' # some label eg: basic content
+description: 'Some content description' # some description for the group eg: basic content for the site
+source_type: 'files' # some source description eg: yaml files
+module: f_migration # module_machine_name
+shared_configuration:
+  source:
+    plugin: migrate_dc_yaml # to make this work install migrate_dc module
+    fileDir: ./sites/default/content/project

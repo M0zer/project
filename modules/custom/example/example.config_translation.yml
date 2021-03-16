@@ -1,0 +1,5 @@
+example.admin.config:
+  title: 'Example module'
+  base_route_name: example.admin.config
+  names:
+    - example.settings

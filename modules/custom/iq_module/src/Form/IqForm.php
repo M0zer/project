@@ -52,18 +52,20 @@ class IqForm extends FormBase {
     
     $form['submit']=[
         '#type' => 'submit',
-        '#value' => $this->t('Submite'),
+        '#value' => $this->t('Submit'),
     ];
 
     return $form;
 }
 public function submitForm(array &$form, FormstateInterface $form_state)
-  { $settings = $this->configFactory->getEditable('iq.settings');
+
+  { 
+    $config = \Drupal::config('iq_module.settings');
+    $iq=$config->get('iq_min_value');
     $iq2=$form_state->getValue('iq_value');
-    $iq=$settings->get('iq_min_value');
     
     $this->messenger()->addWarning($this->t('@iq , @iq2', [
-        '@iq'=>$settings->get('iq_value'),
+        '@iq'=>$iq,
         '@iq2'=>$iq2,
         ]));
       if($iq<$iq2){

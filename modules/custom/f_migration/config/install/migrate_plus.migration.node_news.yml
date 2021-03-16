@@ -1,0 +1,33 @@
+langcode: en
+status: true
+id: node_news
+migration_tags:
+  - news
+migration_group: project
+label: 'News content'
+
+source:
+  fileName: node/news.yml
+  identifier: ~
+  identifierDepth: 0
+  constants:
+    bundle: news
+
+  fields:
+    title: Title
+    tags: tags
+
+process:
+  type: constants/bundle
+  title: title
+  field_category:
+    plugin: migration_lookup
+    source: tags
+    migration: taxonomy_term_tags
+
+destination:
+  plugin: 'entity:node'
+
+migration_dependencies:
+  required:
+    - taxonomy_term_tags

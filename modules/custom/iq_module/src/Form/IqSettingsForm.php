@@ -6,28 +6,13 @@ use Drupal\Core\Form\FormStateInterface;
 
 
 class IqSettingsForm extends ConfigFormBase {
-  protected $configFactory;
-
-  public static function create(ContainerInterface $container)
-  {
-    return new static(
-      $container->get('config.factory')
-    );
-  }
-
-  public function __construct(
-    ConfigFactoryInterface $configFactory
-  )
-  {
-    $this->configFactory = $configFactory;
-  }
 
   /** 
    * Config settings.
    *
    * @var string
    */
-  const SETTINGS = 'example.settings';
+  
 
   /** 
    * {@inheritdoc}
@@ -36,25 +21,23 @@ class IqSettingsForm extends ConfigFormBase {
     return 'iq_settings';
   }
 
-  /** 
-   * {@inheritdoc}
-   */
-  protected function getEditableConfigNames() {
-    return [
-      static::SETTINGS,
-    ];
+  protected function getEditableConfigNames(){
+
+      return [];    
   }
+
 
   /** 
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config(static::SETTINGS);
-    $settings = $this->configFactory->getEditable('iq_module.settings');
+    $config = \Drupal::config('iq_module.settings');
+    print $config->get('iq_min_value');
+    
     $form['Iq_value'] = [
       '#type' => 'number',
       '#title' => $this->t('IQ'),
-      '#default_value' => $settings->get('iq_value'),
+      '#default_value' => 120,
     ];  
 
     return parent::buildForm($form, $form_state);

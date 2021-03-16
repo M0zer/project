@@ -1,0 +1,6 @@
+politics:
+  name: 'Politics'
+tech:
+  name: 'Tech'
+business:
+  name: 'Business'

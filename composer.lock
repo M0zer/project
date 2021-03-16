@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e582fee9709bae1655ffa0748737b55",
+    "content-hash": "c2e366a3cba55f15f8f8870311336ae3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1735,6 +1735,53 @@
             "keywords": [
                 "drupal"
             ]
+        },
+        {
+            "name": "drupal/migrate_dc",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_dc.git",
+                "reference": "19df788b8d83e6ea47f2b3e4854ff35a827edb8c"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/migrate_plus": "^5.0",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "drupal/commerce_shipping": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1603137728",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sweetchuck",
+                    "homepage": "https://www.drupal.org/user/23728"
+                }
+            ],
+            "description": "Default or dummy content migration helper plugins",
+            "homepage": "https://www.drupal.org/project/migrate_dc",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migrate_dc"
+            },
+            "time": "2020-10-19T20:22:19+00:00"
         },
         {
             "name": "drupal/migrate_plus",
@@ -6394,8 +6441,9 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/migrate_dc": 20,
         "drupal/migrate_tools": 20
     },
     "prefer-stable": true,

@@ -1,0 +1,4 @@
+example.admin.config:
+  route_name: example.admin.config
+  title: Settings
+  base_route: example.admin.config

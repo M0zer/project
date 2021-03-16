@@ -1,4 +1,4 @@
-iq_form.module:
+IqFrom.module:
   path: '/iq'
   defaults:
     _form: '\Drupal\iq_module\Form\IqForm'
@@ -6,10 +6,10 @@ iq_form.module:
   requirements:
     _access: 'TRUE'
 
-iq_settings.settings:
+iq_module.admin.config:
   path: '/admin/config/iq_module/iq'
   defaults:
-    _form: '\Drupal\iq_module\Form\IqSettingForm'
+    _form: '\Drupal\iq_module\Form\IqSettingsForm'
     _title: 'example'
   requirements:
     _access: 'TRUE'
