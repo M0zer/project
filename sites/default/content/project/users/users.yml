@@ -1,0 +1,8 @@
+user1:  
+  source_name: kekw
+  source_pass: kekw 
+  source_mail: kekw@kekw.com
+  source_status: 1
+  source_roles:
+    - target_id: manager
+    - target_id: administrator 

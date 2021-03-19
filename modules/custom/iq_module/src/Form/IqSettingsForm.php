@@ -23,7 +23,7 @@ class IqSettingsForm extends ConfigFormBase {
 
   protected function getEditableConfigNames(){
 
-      return [];    
+      return ['iq_module.settings'];    
   }
 
 
@@ -31,13 +31,11 @@ class IqSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = \Drupal::config('iq_module.settings');
-    print $config->get('iq_min_value');
-    
-    $form['Iq_value'] = [
+    $config=$this->config('iq_module.settings');
+    $form['iq_value'] = [
       '#type' => 'number',
       '#title' => $this->t('IQ'),
-      '#default_value' => 120,
+      '#default_value' => $config->get('iq_min_value'),
     ];  
 
     return parent::buildForm($form, $form_state);
@@ -47,8 +45,9 @@ class IqSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $settings
-      ->set('iq_value', $form_state->getValue('iq_value'))
+    
+    $this->config('iq_module.settings')
+      ->set('iq_min_value', $form_state->getValue('iq_value'))
       ->save();
 
     parent::submitForm($form, $form_state);

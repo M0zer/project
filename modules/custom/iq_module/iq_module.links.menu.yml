@@ -1,0 +1,6 @@
+example.admin:
+  title: 'iq settings'
+  description: 'Manage example settings for your site'
+  parent: system.admin_config_development
+  route_name: iq_module.admin.config
+  weight: 100

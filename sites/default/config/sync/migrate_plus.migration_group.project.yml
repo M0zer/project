@@ -1,11 +1,7 @@
 uuid: 6842a001-23ad-43ca-97f5-e52a0900a336
 langcode: en
 status: true
-dependencies:
-  module:
-    - f_migration
-_core:
-  default_config_hash: yz6W5Ke37dpcAVmJP4sGi7T3zYDRR5CSvYFL9e09q5Y
+dependencies: {  }
 id: project
 label: 'Some content'
 description: 'Some content description'

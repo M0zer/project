@@ -15,15 +15,15 @@ source:
 
   fields:
     source_title: Title
-    #tags: tags
+    tags: tags
 
 process:
   type: constants/bundle
   title: source_title
-  #field_category:
-   # plugin: migration_lookup
-    #source: tags
-    #migration: taxonomy_term_tags
+  field_category:
+    plugin: migration_lookup
+    source: tags
+    migration: taxonomy_term_tags
 
 destination:
   plugin: 'entity:node'

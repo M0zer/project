@@ -2,5 +2,6 @@ iq_module.settings:
   type: config_object
   label: 'Iq config'
   mapping:
-    iq_min_value: integer
-    label: 'iq min value'
+    iq_min_value:  
+      type: integer
+      label: 'iq min value'

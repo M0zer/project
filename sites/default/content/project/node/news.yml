@@ -1,6 +1,36 @@
 news_01:
-  source_title: 'news5'
+  source_title: 'news1'
+  tags: politics
 news_02:
-  source_title: 'news5'
+  source_title: 'news2'
+  tags: politics
 news_03:
+  source_title: 'news3'
+  tags: politics
+news_04:
+  source_title: 'news4'
+  tags: politics
+news_05:
   source_title: 'news5'
+  tags: politics
+news_06:
+  source_title: 'news6'
+  tags: politics
+news_07:
+  source_title: 'news7'
+  tags: politics
+news_08:
+  source_title: 'news8'
+  tags: politics
+news_09:
+  source_title: 'news9'
+  tags: politics
+news_10:
+  source_title: 'news10'
+  tags: politics
+news_11:
+  source_title: 'news11'
+  tags: politics
+news_12:
+  source_title: 'news12'
+  tags: politics

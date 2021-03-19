@@ -1,0 +1,40 @@
+langcode: en
+status: true
+id: users
+migration_tags:
+  - users
+migration_group: project
+label: 'News content'
+
+source:
+  fileName: users/users.yml
+  identifier: ~
+  identifierDepth: 0
+  constants:
+    bundle: users
+
+  fields:
+    source_name: User
+    source_pass: Password 
+    source_mail: E-mail
+    source_status: status
+    source_roles: Roles
+
+
+process:
+  name: source_name
+  pass:
+    plugin: callback
+    callable: md5
+    source: source_pass  
+  mail: source_mail
+  status: source_status
+  roles: 
+    source: source_roles
+    plugin: skip_on_empty
+    method: process
+  
+
+destination:
+  plugin: 'entity:user'
+  md5_passwords: true

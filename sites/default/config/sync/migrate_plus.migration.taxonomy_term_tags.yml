@@ -2,8 +2,6 @@ uuid: f54b85a3-b0ea-446b-aa41-48f0b164ac42
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: p9PdNxFsUdv4qDkqRQS0vSLY5mJImHaFSIOu8qA36l4
 id: taxonomy_term_tags
 class: null
 field_plugin_method: null
