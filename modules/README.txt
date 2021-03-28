@@ -40,3 +40,6 @@ MORE INFORMATION
 
 Refer to the “Developing for Drupal” section of the README.txt in the Drupal
 root directory for further information on extending Drupal with custom modules.
+
+lando drush site:install minimal --existing-config
+lando drush migrate:import --all
