@@ -1,0 +1,6 @@
+name: sm custom module
+description: our sm module that do something
+package: Custom
+
+type: module
+core_version_requirement: 9.x

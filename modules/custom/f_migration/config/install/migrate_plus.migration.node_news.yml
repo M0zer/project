@@ -20,7 +20,7 @@ source:
 process:
   type: constants/bundle
   title: source_title
-  field_category:
+  field_tax:
     plugin: migration_lookup
     source: tags
     migration: taxonomy_term_tags

@@ -6,3 +6,11 @@ user1:
   source_roles:
     - target_id: manager
     - target_id: administrator 
+user2:  
+  source_name: asd
+  source_pass: asd 
+  source_mail: asd@asd.com
+  source_status: 1
+  source_roles:
+    - target_id: manager
+    - target_id: administrator 

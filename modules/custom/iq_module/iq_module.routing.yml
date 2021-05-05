@@ -4,7 +4,7 @@ IqFrom.module:
     _form: '\Drupal\iq_module\Form\IqForm'
     _title: 'IQ'
   requirements:
-    _access: 'TRUE'
+    _role: 'authenticated user'
 
 iq_module.admin.config:
   path: '/admin/config/iq_module/iq'
@@ -12,5 +12,5 @@ iq_module.admin.config:
     _form: '\Drupal\iq_module\Form\IqSettingsForm'
     _title: 'example'
   requirements:
-    _access: 'TRUE'
+    _role: administrator
 

@@ -1,0 +1,7 @@
+SmForm.module:
+  path: '/sm'
+  defaults:
+    _form: '\Drupal\sm_module\Form\SmForm'
+    _title: 'SM'
+  requirements:
+    _role: administrator
